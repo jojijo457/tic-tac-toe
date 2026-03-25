@@ -1,5 +1,5 @@
-const strawberryIcon = '/tic-tac-toe/src/images/strawberry.png'
-const meringueIcon = '/tic-tac-toe/src/images/meringue.png'
+const strawberryIcon = 'src/images/strawberry.png'
+const meringueIcon = 'src/images/meringue.png'
 
 window.addEventListener ('DOMContentLoaded', () => {
   const tiles = Array.from(document.querySelectorAll('.tile'));
