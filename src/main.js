@@ -1,5 +1,3 @@
-import './style.css'
-
 const strawberryIcon = './images/strawberry.png'
 const meringueIcon = './images/meringue.png'
 
