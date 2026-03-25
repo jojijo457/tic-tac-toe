@@ -1,7 +1,7 @@
 import './style.css'
 
-const strawberryIcon = '../images/strawberry.png'
-const meringueIcon = '../images/meringue.png'
+const strawberryIcon = '../images/strawberry.png?url'
+const meringueIcon = '../images/meringue.png?url'
 
 window.addEventListener ('DOMContentLoaded', () => {
   const tiles = Array.from(document.querySelectorAll('.tile'));
