@@ -1,0 +1,156 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  box-sizing: border-box;
+}
+
+.mark-icon {
+  width: 84%;
+  height: 84%;
+  object-fit: contain;
+
+  animation: popIn 0.4s ease-out;
+}
+
+@keyframes popIn {
+  0% {transform: scale(0); opacity: 0;}
+  77% {transform: scale(1.1);}
+  100% {transform: scale(1); opacity: 1;}
+}
+
+.background {
+  background-color: rgb(250, 237, 220);
+  height: 100vh;
+  padding-top: 1px;
+
+  background-image: 
+  url('/images/cloud.png'),
+  url('/images/cloud.png'),
+  url('/images/cloud.png'),
+  url('/images/cloud.png'),
+  url('/images/cloud.png'),
+  url('/images/cloud.png');
+  background-repeat: no-repeat;
+  background-size: 700px, 750px, 450px, 244px, 200px, 177px;
+  background-position: 
+  left -100px bottom -100%,
+  right -200px bottom -100%,
+  left -15px bottom 400px,
+  right 100px top 50px,
+  right 150px top 320px,
+  left 180px top 70px;
+}
+
+.title {
+  background: linear-gradient(to bottom, rgb(255, 133, 157), rgb(169, 40, 74)) ;
+
+  -webkit-background-clip: text;        /* coupe le background pour qu'il suive la forme du texte */
+  -webkit-text-fill-color: transparent; /* couleur de base du texte transparente */
+
+  filter: drop-shadow(2px 2px 0px rgba(255, 138, 165, 0.699));
+  text-align: center;
+  font-size: 40px;
+  margin-top: 10%;
+}
+
+.display {
+  color: rgb(122, 122, 122);
+  font-size: 25px;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.hide {
+  display: none;
+}
+
+.container {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);          /*1fr pour des colonnes égales*/
+  grid-template-rows: repeat(3, 1fr);
+  max-width: 300px;
+}
+
+.tile {
+  border: 5px solid rgb(255, 156, 174);
+  min-width: 100px;
+  min-height: 100px;
+  border-radius: 10%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.tile:hover {
+  background-color: rgba(255, 156, 174, 0.1);
+}
+
+.playerX {
+  color: rgb(216, 94, 145);
+}
+
+.playerO {
+  color: rgb(227, 181, 147);
+}
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+}
+
+#reset {
+  background-color: rgb(255, 156, 174);
+  color: rgba(135, 19, 35, 0.76);
+  padding: 7px;
+  border-radius: 10px;
+  border: none;
+  font-size: 20px;
+  margin-left: 1em;
+  cursor: pointer;
+}
+
+#reset:hover {
+  transform: scale(1.1);
+}
+
+/*phone adaptation*/
+@media (max-width: 600px) {
+  .title {
+    font-size: 32px; 
+    margin-top: 60px;
+  }
+
+  .container {
+    width: 90vw;  
+    height: 90vw; 
+    max-width: 320px; 
+  }
+
+  .tile {
+    min-width: 0; 
+    min-height: 0;
+  }
+
+  /* nuages pour mobile */
+  .background {
+   background-size: 300px, 350px, 200px, 120px, 150px, 80px;
+    
+    /* On ajuste les positions pour l'écran vertical du mobile */
+    background-position: 
+      left -50px bottom -50px,   
+      right -90px bottom -50px,   
+      left -50px top 200px,      
+      right 25px top 50px,        
+      left 100px top 100px,       
+      left 30px top 40px;         
+  }
+}
