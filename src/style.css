@@ -46,6 +46,7 @@
   background: linear-gradient(to bottom, rgb(255, 133, 157), rgb(169, 40, 74)) ;
 
   -webkit-background-clip: text;        /* coupe le background pour qu'il suive la forme du texte */
+  background-clip: text;
   -webkit-text-fill-color: transparent; /* couleur de base du texte transparente */
 
   filter: drop-shadow(2px 2px 0px rgba(255, 138, 165, 0.699));
