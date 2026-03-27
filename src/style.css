@@ -143,7 +143,6 @@
   .background {
    background-size: 300px, 350px, 200px, 120px, 150px, 80px;
     
-    /* On ajuste les positions pour l'écran vertical du mobile */
     background-position: 
       left -50px bottom -50px,   
       right -90px bottom -50px,   
